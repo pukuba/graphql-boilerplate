@@ -1,0 +1,30 @@
+overwrite: true
+generates:
+  src/graphql/__generated__/schema.graphql:
+    schema:
+      - ./src/graphql/**/*.graphql
+    plugins:
+      - schema-ast
+    config:
+      includeDirectives: true
+  src/graphql/__generated__/typings.ts:
+    schema:
+      - ./src/graphql/**/*.graphql
+    plugins:
+      - "typescript"
+      - "typescript-resolvers"
+    config:
+      noNamespaces: true
+  src/graphql/__generated__/typeDefs.ts:
+    schema:
+      - ./src/graphql/**/*.graphql
+    plugins:
+      - add:
+          content: |
+            const typeDefs = `
+      - schema-ast
+      - add:
+          placement: "append"
+          content: |
+            `
+            export default typeDefs
