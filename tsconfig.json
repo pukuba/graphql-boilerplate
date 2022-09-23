@@ -12,8 +12,9 @@
 		"typeRoots": ["./node_modules/@types", "./@types"],
 		"paths": {
 			"~/*": ["./src/*"],
-			"~/common": ["./src/common"],
-			"~/graphql": ["./src/graphql"]
+			"@common/*": ["./src/common/*"],
+			"@graphql/*": ["./src/graphql/*"],
+			"@lib/*": ["./src/common/lib/*"]
 		}
 	},
 	"exclude": ["node_modules", "dist", "tmp"],
