@@ -1,5 +1,11 @@
 schema {
   query: Query
+  mutation: Mutation
+}
+
+type Mutation {
+  """강제로 에러를 발생시킵니다"""
+  throw: Boolean!
 }
 
 type Query {
