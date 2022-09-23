@@ -1007,16 +1007,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fastify/cors@npm:^8.1.0":
-  version: 8.1.0
-  resolution: "@fastify/cors@npm:8.1.0"
-  dependencies:
-    fastify-plugin: ^4.0.0
-    mnemonist: 0.39.2
-  checksum: 7fb48eb743b0e821b8104d308ccc76ccd105ee09ad413bf035c8975e508acb75196cee4fe4ec9b6ee5f9917346fa07fc4c08835e6e953dc7e84f27774aea3857
-  languageName: node
-  linkType: hard
-
 "@fastify/error@npm:^2.0.0":
   version: 2.0.0
   resolution: "@fastify/error@npm:2.0.0"
@@ -3661,13 +3651,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fastify-plugin@npm:^4.0.0":
-  version: 4.2.1
-  resolution: "fastify-plugin@npm:4.2.1"
-  checksum: 01eaa6644f21a50c0a83a8ac0dceea8f2d35bafd233788a10a7b60803bb0b27068677b718e05ce14f4e97778f0966389eedbbb16b4f3886d7fbbb6125788d681
-  languageName: node
-  linkType: hard
-
 "fastify@npm:^3.29.2":
   version: 3.29.2
   resolution: "fastify@npm:3.29.2"
@@ -4046,7 +4029,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "graphql-boilerplate@workspace:."
   dependencies:
-    "@fastify/cors": ^8.1.0
+    "@fastify/cors": ^7.0.0
     "@graphql-codegen/add": ^3.2.1
     "@graphql-codegen/cli": ^2.12.0
     "@graphql-codegen/introspection": ^2.2.1
@@ -4065,6 +4048,7 @@ __metadata:
     eslint: ^8.23.1
     fastify: ^3.29.2
     graphql: ^16.6.0
+    graphql-voyager-fastify-plugin: ^0.1.3
     nodemon: ^2.0.20
     pino: ^8.6.0
     pino-pretty: ^9.1.0
@@ -4124,6 +4108,15 @@ __metadata:
   peerDependencies:
     graphql: ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
   checksum: b15162a3d62f17b9b79302445b9ee330e041582f1c7faca74b9dec5daa74272c906ec1c34e1c50592bb6215e5c3eba80a309103f6ba9e4c1cddc350c46f010df
+  languageName: node
+  linkType: hard
+
+"graphql-voyager-fastify-plugin@npm:^0.1.3":
+  version: 0.1.3
+  resolution: "graphql-voyager-fastify-plugin@npm:0.1.3"
+  dependencies:
+    fastify-plugin: ^3.0.0
+  checksum: d0d930cb81fead4868b8f10eba362d829c142ac99fbb52ea617477a5107bf878ec24254a70314a050553fae5bec342536a6fc0bc163343e119f1a31b1aed2fae
   languageName: node
   linkType: hard
 
@@ -5199,15 +5192,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mnemonist@npm:0.39.2":
-  version: 0.39.2
-  resolution: "mnemonist@npm:0.39.2"
-  dependencies:
-    obliterator: ^2.0.1
-  checksum: 77075ddf30c5e7ee8ccde6d09b61a2511eb324e9d04871e6cb48ede9ed1d2b002ad121314912bf1926d12ba3cb520ca2fb54c2a6c3f9d4467774af2f447907aa
-  languageName: node
-  linkType: hard
-
 "ms@npm:2.1.2":
   version: 2.1.2
   resolution: "ms@npm:2.1.2"
@@ -5415,13 +5399,6 @@ __metadata:
     has-symbols: ^1.0.3
     object-keys: ^1.1.1
   checksum: 76cab513a5999acbfe0ff355f15a6a125e71805fcf53de4e9d4e082e1989bdb81d1e329291e1e4e0ae7719f0e4ef80e88fb2d367ae60500d79d25a6224ac8864
-  languageName: node
-  linkType: hard
-
-"obliterator@npm:^2.0.1":
-  version: 2.0.4
-  resolution: "obliterator@npm:2.0.4"
-  checksum: f28ad35b6d812089315f375dc3e6e5f9bebf958ebe4b10ccd471c7115cbcf595e74bdac4783ae758e5b1f47e3096427fdb37cfa7bed566b132df92ff317b9a7c
   languageName: node
   linkType: hard
 
