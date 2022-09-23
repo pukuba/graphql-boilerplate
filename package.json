@@ -8,6 +8,7 @@
 		"start": "node dist/main.js"
 	},
 	"dependencies": {
+		"@fastify/cors": "^8.1.0",
 		"@graphql-tools/schema": "^7.1.5",
 		"apollo-server-core": "^3.10.2",
 		"apollo-server-fastify": "^3.10.2",

@@ -23,7 +23,7 @@
 		"jsx": "preserve",
 		"paths": {
 			"~/*": ["./src/*"],
-			"~graphql/*": ["./src/graphql/*"],
+			"@graphql/*": ["./src/graphql/*"],
 			"@common/*": ["./src/common/*"],
 			"@lib/*": ["./src/common/lib/*"]
 		}
