@@ -1,26 +1,33 @@
 {
 	"compilerOptions": {
 		"module": "commonjs",
-		"target": "es6",
-		"moduleResolution": "node",
-		"outDir": "dist",
-		"strict": true,
-		"esModuleInterop": true,
-		"baseUrl": "./",
+		"declaration": true,
+		"removeComments": true,
 		"emitDecoratorMetadata": true,
 		"experimentalDecorators": true,
-		"typeRoots": ["./node_modules/@types", "./@types"],
+		"target": "es2019",
+		"sourceMap": true,
+		"outDir": "./dist",
+		"baseUrl": "./",
+		"allowJs": true,
+		"incremental": true,
+		"moduleResolution": "node",
+		"esModuleInterop": true,
+		"strict": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": false,
 		"resolveJsonModule": true,
 		"forceConsistentCasingInFileNames": true,
 		"skipLibCheck": true,
 		"importHelpers": true,
+		"jsx": "preserve",
 		"paths": {
 			"~/*": ["./src/*"],
+			"~graphql/*": ["./src/graphql/*"],
 			"@common/*": ["./src/common/*"],
-			"@graphql/*": ["./src/graphql/*"],
 			"@lib/*": ["./src/common/lib/*"]
 		}
 	},
-	"exclude": ["node_modules", "dist", "tmp"],
-	"include": ["src"]
+	"exclude": ["node_modules", "dist", "tmp", ".data", ".next"],
+	"include": ["src", "test"]
 }
