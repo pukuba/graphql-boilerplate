@@ -8,8 +8,6 @@ import { startApolloServer } from '@graphql/server';
 
 import { getSchema } from './graphql/schema';
 
-startApolloServer(getSchema());
-
 const bootstrap = async () => {
 	const { app, server } = startApolloServer(getSchema());
 	await server.start();
