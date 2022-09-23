@@ -15,6 +15,7 @@ generates:
       - "typescript-resolvers"
     config:
       noNamespaces: true
+      contextType: ../context#ApolloContext
   src/graphql/__generated__/typeDefs.ts:
     schema:
       - ./src/graphql/**/*.graphql

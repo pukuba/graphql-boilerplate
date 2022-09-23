@@ -9,6 +9,8 @@ import { GraphQLSchema } from 'graphql';
 import { exceptionLoggingPlugin, fastifyAppClosePlugin } from '@common/plugin';
 import { getConstant } from '@lib/constant';
 
+import { createApolloContext } from './context';
+
 export const startApolloServer = (schema: GraphQLSchema) => {
 	const app = fastify({
 		logger: {
@@ -20,6 +22,7 @@ export const startApolloServer = (schema: GraphQLSchema) => {
 		csrfPrevention: true,
 		cache: "bounded",
 		introspection: getConstant("GRAPHQL_PLAYGROUND"),
+		context: createApolloContext(),
 		plugins: [
 			exceptionLoggingPlugin,
 			fastifyAppClosePlugin(app),
