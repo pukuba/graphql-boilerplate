@@ -8,6 +8,7 @@ import { GraphQLSchema } from 'graphql';
 
 import { exceptionLoggingPlugin, fastifyAppClosePlugin } from '@common/plugin';
 import { getConstant } from '@lib/constant';
+import { executor } from '@lib/jit-executor';
 
 import { createApolloContext } from './context';
 
@@ -29,6 +30,7 @@ export const startApolloServer = (schema: GraphQLSchema) => {
 			ApolloServerPluginDrainHttpServer({ httpServer: app.server }),
 			ApolloServerPluginLandingPageLocalDefault({ embed: true }),
 		],
+		executor,
 	});
 	return {
 		app,
