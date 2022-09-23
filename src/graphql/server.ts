@@ -3,6 +3,7 @@ import {
   ApolloServerPluginLandingPageLocalDefault,
 } from 'apollo-server-core';
 import { ApolloServer } from 'apollo-server-fastify';
+import crypto from 'crypto';
 import fastify from 'fastify';
 import { GraphQLSchema } from 'graphql';
 
@@ -17,6 +18,7 @@ export const startApolloServer = (schema: GraphQLSchema) => {
 		logger: {
 			prettyPrint: getConstant("DEPLOY_MODE") !== "prod",
 		},
+		genReqId: () => crypto.randomUUID(),
 	});
 	const server = new ApolloServer({
 		schema,
