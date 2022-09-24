@@ -1,6 +1,6 @@
 import winston from 'winston';
 
-import { getConstant } from '../constant';
+import { getConstant } from '@lib/constant';
 
 const winstonConfig: winston.LoggerOptions = {
 	format: winston.format.combine(

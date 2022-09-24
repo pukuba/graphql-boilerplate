@@ -25,7 +25,8 @@
 			"~/*": ["./src/*"],
 			"@graphql/*": ["./src/graphql/*"],
 			"@common/*": ["./src/common/*"],
-			"@lib/*": ["./src/common/lib/*"]
+			"@lib/*": ["./src/common/lib/*"],
+			"@core/*": ["./src/core/*"]
 		}
 	},
 	"exclude": ["node_modules", "dist", "tmp", ".data", ".next"],

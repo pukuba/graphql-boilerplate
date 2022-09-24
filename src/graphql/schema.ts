@@ -1,7 +1,7 @@
 import { GraphQLSchema } from 'graphql';
-import logger from '~/common/lib/logger';
 
 import { makeExecutableSchema } from '@graphql-tools/schema';
+import logger from '@lib/logger';
 
 import { typeDefs } from './__generated__';
 import { resolvers } from './resolvers';

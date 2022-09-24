@@ -1617,6 +1617,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@ioredis/as-callback@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "@ioredis/as-callback@npm:3.0.0"
+  checksum: 2835e39631497fe4f8b07d95576abea165c9f7efef81e9e55c733588051ff4edcb31eeb59f36127923dae0cb1a8e21b4e27ee3ab79a065a0baeecf861c3bc0b1
+  languageName: node
+  linkType: hard
+
+"@ioredis/commands@npm:^1.1.1":
+  version: 1.2.0
+  resolution: "@ioredis/commands@npm:1.2.0"
+  checksum: 9b20225ba36ef3e5caf69b3c0720597c3016cc9b1e157f519ea388f621dd9037177f84cfe7e25c4c32dad7dd90c70ff9123cd411f747e053cf292193c9c461e2
+  languageName: node
+  linkType: hard
+
 "@josephg/resolvable@npm:^1.0.0":
   version: 1.0.1
   resolution: "@josephg/resolvable@npm:1.0.1"
@@ -1874,6 +1888,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/ioredis-mock@npm:^5.6.0":
+  version: 5.6.0
+  resolution: "@types/ioredis-mock@npm:5.6.0"
+  dependencies:
+    "@types/ioredis": "*"
+  checksum: df430006c5a90d5fe9d23145b37dc324f9d21bc4c8a1763f70b3ff6ca70ea5a8dadb6e5cd1c170e8ddb7669f459b5b0843550da9fdc028419ab2addea84a0c41
+  languageName: node
+  linkType: hard
+
+"@types/ioredis@npm:*, @types/ioredis@npm:^4.28.10":
+  version: 4.28.10
+  resolution: "@types/ioredis@npm:4.28.10"
+  dependencies:
+    "@types/node": "*"
+  checksum: 0f2788cf25f490d3b345db8c5f8b8ce3f6c92cc99abcf744c8f974f02b9b3875233b3d22098614c462a0d6c41c523bd655509418ea88eb6249db6652290ce7cf
+  languageName: node
+  linkType: hard
+
 "@types/js-yaml@npm:^4.0.0":
   version: 4.0.5
   resolution: "@types/js-yaml@npm:4.0.5"
@@ -1894,6 +1926,13 @@ __metadata:
   dependencies:
     "@types/node": "*"
   checksum: 33815ab02d1371b423118316b7706d2f2ec03eeee5e1494be72da50425d2384e5e0a09ea193f7a5ab4b4f6a9c5847147305f50e965f3d927a95bdf8adb471b2a
+  languageName: node
+  linkType: hard
+
+"@types/lodash@npm:^4":
+  version: 4.14.185
+  resolution: "@types/lodash@npm:4.14.185"
+  checksum: f81d13da5ecab110ca9c5c7cc2bedc3c9802a6acf668576aecd1b8f4b134ed81d06c15f1e600fb08f05975098280a0d97d30cddfc2cb39ec1c6b56e971ca53b3
   languageName: node
   linkType: hard
 
@@ -2892,6 +2931,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"cluster-key-slot@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "cluster-key-slot@npm:1.1.0"
+  checksum: fc953c75209b1ef9088081bab4e40a0b2586491c974ab93460569c014515ca5a2e31c043f185285e177007162fc353d07836d98f570c171dbe055775430e495b
+  languageName: node
+  linkType: hard
+
 "code-excerpt@npm:^3.0.0":
   version: 3.0.0
   resolution: "code-excerpt@npm:3.0.0"
@@ -3146,7 +3192,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"debug@npm:4, debug@npm:^4.0.0, debug@npm:^4.1.0, debug@npm:^4.1.1, debug@npm:^4.3.1, debug@npm:^4.3.2, debug@npm:^4.3.3":
+"debug@npm:4, debug@npm:^4.0.0, debug@npm:^4.1.0, debug@npm:^4.1.1, debug@npm:^4.3.1, debug@npm:^4.3.2, debug@npm:^4.3.3, debug@npm:^4.3.4":
   version: 4.3.4
   resolution: "debug@npm:4.3.4"
   dependencies:
@@ -3218,6 +3264,13 @@ __metadata:
   version: 1.0.0
   resolution: "delegates@npm:1.0.0"
   checksum: a51744d9b53c164ba9c0492471a1a2ffa0b6727451bdc89e31627fdf4adda9d51277cfcbfb20f0a6f08ccb3c436f341df3e92631a3440226d93a8971724771fd
+  languageName: node
+  linkType: hard
+
+"denque@npm:^2.0.1":
+  version: 2.1.0
+  resolution: "denque@npm:2.1.0"
+  checksum: 1d4ae1d05e59ac3a3481e7b478293f4b4c813819342273f3d5b826c7ffa9753c520919ba264f377e09108d24ec6cf0ec0ac729a5686cbb8f32d797126c5dae74
   languageName: node
   linkType: hard
 
@@ -3732,6 +3785,26 @@ __metadata:
   languageName: node
   linkType: hard
 
+"fengari-interop@npm:^0.1.3":
+  version: 0.1.3
+  resolution: "fengari-interop@npm:0.1.3"
+  peerDependencies:
+    fengari: ^0.1.0
+  checksum: f483e0aedec3a0b49911ffd3207a55f73c861f95ef84fb7582deb45bc65afa2e7bf8f9fc3734563f6c106a438909f94059b5d08f5a7872ffcc3d45d260a3ee15
+  languageName: node
+  linkType: hard
+
+"fengari@npm:^0.1.4":
+  version: 0.1.4
+  resolution: "fengari@npm:0.1.4"
+  dependencies:
+    readline-sync: ^1.4.9
+    sprintf-js: ^1.1.1
+    tmp: ^0.0.33
+  checksum: bd6b04f9738f9cbb58e3c80684a72bf6f7e74c902d26e4e812b1cfbd69c06da5ffb2a8a67a62ecd75603fc565b6b183c1b72be60f2e60c18aa487aad65b62196
+  languageName: node
+  linkType: hard
+
 "figures@npm:^3.0.0":
   version: 3.2.0
   resolution: "figures@npm:3.2.0"
@@ -4058,6 +4131,9 @@ __metadata:
     "@graphql-codegen/typescript-operations": ^2.5.3
     "@graphql-codegen/typescript-resolvers": ^2.7.3
     "@graphql-tools/schema": ^7.1.5
+    "@types/ioredis": ^4.28.10
+    "@types/ioredis-mock": ^5.6.0
+    "@types/lodash": ^4
     "@types/node": ^18.7.18
     "@yarnpkg/plugin-interactive-tools": ^4.0.0-rc.20
     "@yarnpkg/plugin-typescript": ^4.0.0-rc.20
@@ -4070,6 +4146,9 @@ __metadata:
     graphql: ^16.6.0
     graphql-jit: ^0.7.4
     graphql-voyager-fastify-plugin: ^0.1.3
+    ioredis: ^5.2.3
+    ioredis-mock: ^8.2.2
+    lodash: ^4.17.21
     nodemon: ^2.0.20
     pino: ^8.6.0
     pino-pretty: ^9.1.0
@@ -4457,6 +4536,37 @@ __metadata:
   dependencies:
     loose-envify: ^1.0.0
   checksum: cc3182d793aad82a8d1f0af697b462939cb46066ec48bbf1707c150ad5fad6406137e91a262022c269702e01621f35ef60269f6c0d7fd178487959809acdfb14
+  languageName: node
+  linkType: hard
+
+"ioredis-mock@npm:^8.2.2":
+  version: 8.2.2
+  resolution: "ioredis-mock@npm:8.2.2"
+  dependencies:
+    "@ioredis/as-callback": ^3.0.0
+    "@ioredis/commands": ^1.1.1
+    fengari: ^0.1.4
+    fengari-interop: ^0.1.3
+  peerDependencies:
+    ioredis: 5.x
+  checksum: b233d9762ff99468340e0bd8bac83cdf281df2e7243fdc2557587c7ff5762920c09a53cc21de894af5235132299b2be567d8891a2f3f27aa0b10952002a7bda1
+  languageName: node
+  linkType: hard
+
+"ioredis@npm:^5.2.3":
+  version: 5.2.3
+  resolution: "ioredis@npm:5.2.3"
+  dependencies:
+    "@ioredis/commands": ^1.1.1
+    cluster-key-slot: ^1.1.0
+    debug: ^4.3.4
+    denque: ^2.0.1
+    lodash.defaults: ^4.2.0
+    lodash.isarguments: ^3.1.0
+    redis-errors: ^1.2.0
+    redis-parser: ^3.0.0
+    standard-as-callback: ^2.1.0
+  checksum: 2cb7f0f4217e6774accad3620af1b7114722721c1d1824be2c9f0c2a77ab9629f2e0848d18b1a7208bc37796ae1207cb3e0898fce61900cfe797da0382724ad1
   languageName: node
   linkType: hard
 
@@ -4877,10 +4987,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lodash.defaults@npm:^4.2.0":
+  version: 4.2.0
+  resolution: "lodash.defaults@npm:4.2.0"
+  checksum: 84923258235592c8886e29de5491946ff8c2ae5c82a7ac5cddd2e3cb697e6fbdfbbb6efcca015795c86eec2bb953a5a2ee4016e3735a3f02720428a40efbb8f1
+  languageName: node
+  linkType: hard
+
 "lodash.includes@npm:^4.3.0":
   version: 4.3.0
   resolution: "lodash.includes@npm:4.3.0"
   checksum: 71092c130515a67ab3bd928f57f6018434797c94def7f46aafa417771e455ce3a4834889f4267b17887d7f75297dfabd96231bf704fd2b8c5096dc4a913568b6
+  languageName: node
+  linkType: hard
+
+"lodash.isarguments@npm:^3.1.0":
+  version: 3.1.0
+  resolution: "lodash.isarguments@npm:3.1.0"
+  checksum: ae1526f3eb5c61c77944b101b1f655f846ecbedcb9e6b073526eba6890dc0f13f09f72e11ffbf6540b602caee319af9ac363d6cdd6be41f4ee453436f04f13b5
   languageName: node
   linkType: hard
 
@@ -6023,10 +6147,33 @@ __metadata:
   languageName: node
   linkType: hard
 
+"readline-sync@npm:^1.4.9":
+  version: 1.4.10
+  resolution: "readline-sync@npm:1.4.10"
+  checksum: 4dbd8925af028dc4cb1bb813f51ca3479035199aa5224886b560eec8e768ab27d7ebf11d69a67ed93d5a130b7c994f0bdb77796326e563cf928bbfd560e3747e
+  languageName: node
+  linkType: hard
+
 "real-require@npm:^0.2.0":
   version: 0.2.0
   resolution: "real-require@npm:0.2.0"
   checksum: fa060f19f2f447adf678d1376928c76379dce5f72bd334da301685ca6cdcb7b11356813332cc243c88470796bc2e2b1e2917fc10df9143dd93c2ea608694971d
+  languageName: node
+  linkType: hard
+
+"redis-errors@npm:^1.0.0, redis-errors@npm:^1.2.0":
+  version: 1.2.0
+  resolution: "redis-errors@npm:1.2.0"
+  checksum: f28ac2692113f6f9c222670735aa58aeae413464fd58ccf3fce3f700cae7262606300840c802c64f2b53f19f65993da24dc918afc277e9e33ac1ff09edb394f4
+  languageName: node
+  linkType: hard
+
+"redis-parser@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "redis-parser@npm:3.0.0"
+  dependencies:
+    redis-errors: ^1.0.0
+  checksum: 89290ae530332f2ae37577647fa18208d10308a1a6ba750b9d9a093e7398f5e5253f19855b64c98757f7129cccce958e4af2573fdc33bad41405f87f1943459a
   languageName: node
   linkType: hard
 
@@ -6499,6 +6646,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"sprintf-js@npm:^1.1.1":
+  version: 1.1.2
+  resolution: "sprintf-js@npm:1.1.2"
+  checksum: d4bb46464632b335e5faed381bd331157e0af64915a98ede833452663bc672823db49d7531c32d58798e85236581fb7342fd0270531ffc8f914e186187bf1c90
+  languageName: node
+  linkType: hard
+
 "ssri@npm:^9.0.0":
   version: 9.0.1
   resolution: "ssri@npm:9.0.1"
@@ -6521,6 +6675,13 @@ __metadata:
   dependencies:
     escape-string-regexp: ^2.0.0
   checksum: 76b69da0f5b48a34a0f93c98ee2a96544d2c4ca2557f7eef5ddb961d3bdc33870b46f498a84a7c4f4ffb781df639840e7ebf6639164ed4da5e1aeb659615b9c7
+  languageName: node
+  linkType: hard
+
+"standard-as-callback@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "standard-as-callback@npm:2.1.0"
+  checksum: 88bec83ee220687c72d94fd86a98d5272c91d37ec64b66d830dbc0d79b62bfa6e47f53b71646011835fc9ce7fae62739545d13124262b53be4fbb3e2ebad551c
   languageName: node
   linkType: hard
 

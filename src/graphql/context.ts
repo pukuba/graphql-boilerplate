@@ -1,7 +1,8 @@
 import { ContextFunction } from 'apollo-server-core';
 import { FastifyContext } from 'apollo-server-fastify';
 import Winston from 'winston';
-import logger from '~/common/lib/logger';
+
+import logger from '@lib/logger';
 
 export interface ApolloContext {
 	logger: Winston.Logger;
