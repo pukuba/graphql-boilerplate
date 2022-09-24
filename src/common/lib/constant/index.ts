@@ -6,6 +6,7 @@ const envSchema = z.object({
 	LOG_LEVEL: z.enum(["trace", "debug", "info", "warn", "error", "fatal"]),
 	REDIS_PORT: z.string().transform((v) => parseInt(v)),
 	REDIS_HOST: z.string(),
+	ADMIN_KEY: z.string(),
 });
 
 const constant = envSchema.parse(process.env);
