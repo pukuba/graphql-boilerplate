@@ -8,11 +8,15 @@
 		"start": "node dist/main.js"
 	},
 	"dependencies": {
+		"@bull-board/api": "^3.11.0",
+		"@bull-board/fastify": "^3.11.0",
+		"@bull-board/ui": "^4.3.1",
 		"@fastify/cors": "^7.0.0",
 		"@graphql-tools/schema": "^7.1.5",
 		"apollo-server-core": "^3.10.2",
 		"apollo-server-fastify": "^3.10.2",
 		"apollo-server-plugin-base": "^3.6.2",
+		"bullmq": "^2.1.0",
 		"dotenv": "^16.0.2",
 		"fastify": "^3.29.2",
 		"graphql": "^16.6.0",

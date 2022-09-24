@@ -1,6 +1,7 @@
 import { FastifyReply, FastifyRequest, HookHandlerDoneFunction } from 'fastify';
 
 import { getConstant } from '../constant';
+import logger from '../logger';
 
 export const adminAuthentication = (
 	req: FastifyRequest,
@@ -9,10 +10,14 @@ export const adminAuthentication = (
 ) => {
 	const authorization = req.headers.authorization;
 	if (!authorization) {
-		const err = new Error("Unauthorized");
+		logger.log("error", {
+			message: "Unauthorized",
+			id: req.id,
+			headers: req.headers,
+		});
 		res.header("WWW-Authenticate", "Basic");
 		res.status(401);
-		return done(err);
+		return res.redirect(req.url);
 	}
 
 	const auth = Buffer.from(authorization.split(" ")[1], "base64")
@@ -20,11 +25,15 @@ export const adminAuthentication = (
 		.split(":");
 	const password = auth[1];
 	if (password === getConstant("ADMIN_KEY")) {
-		done();
+		return done();
 	} else {
-		const err = new Error("Unauthorized");
+		logger.log("error", {
+			message: "Unauthorized",
+			id: req.id,
+			headers: req.headers,
+		});
 		res.header("WWW-Authenticate", "Basic");
 		res.status(401);
-		return done(err);
+		return res.redirect(req.url);
 	}
 };

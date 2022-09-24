@@ -7,11 +7,16 @@ import cors from '@fastify/cors';
 import { startApolloServer } from '@graphql/server';
 import { adminAuthentication } from '@lib/basic-auth';
 
+import { applyBullBoard } from './common/lib/apply-bull-board';
 import { getSchema } from './graphql/schema';
 
 const bootstrap = async () => {
 	const { app, server } = startApolloServer(getSchema());
 	await server.start();
+	app.register(applyBullBoard().registerPlugin(), {
+		basePath: "/queue",
+		prefix: "/queue",
+	});
 	app.register(server.createHandler());
 	app.register(GraphQLVoyagerFastify, {
 		path: "/voyager",
@@ -21,10 +26,10 @@ const bootstrap = async () => {
 		res.send("ok").status(200);
 	});
 	app.addHook("onRequest", (req, res, done) => {
-		if (req.routerPath === "/voyager") {
-			adminAuthentication(req, res, done);
+		if (["/voyager", "/queue"].some((v) => v === req.routerPath)) {
+			return adminAuthentication(req, res, done);
 		}
-		done();
+		return done();
 	});
 	app.register(cors, { origin: "*", credentials: true });
 	app.listen({ port: 4000 });
