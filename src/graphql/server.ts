@@ -15,10 +15,33 @@ import { createApolloContext } from './context';
 
 export const startApolloServer = (schema: GraphQLSchema) => {
 	const app = fastify({
+		disableRequestLogging: true,
 		logger: {
-			prettyPrint: getConstant("DEPLOY_MODE") !== "prod",
+			prettyPrint: {
+				messageFormat: "{level} - {msg} - {pid} - {reqId}",
+				colorize: getConstant("DEPLOY_MODE") !== "prod",
+				translateTime: "SYS:h:MM:ss TT Z o",
+				levelFirst: true,
+			},
+			level: getConstant("LOG_LEVEL"),
 		},
-		genReqId: () => crypto.randomUUID(),
+		genReqId() {
+			return crypto.randomUUID();
+		},
+	});
+	app.addHook("onRequest", (req, res, done) => {
+		if (req.routerPath === "/graphql") {
+			req.log.info("request");
+		}
+		done();
+	});
+	app.addHook("onResponse", (req, res, done) => {
+		if (req.routerPath === "/graphql") {
+			res.statusCode === 200
+				? req.log.info(`response status: ${res.statusCode}`)
+				: req.log.error(`response status: ${res.statusCode}`);
+		}
+		done();
 	});
 	const server = new ApolloServer({
 		schema,

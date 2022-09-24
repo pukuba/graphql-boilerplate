@@ -16,6 +16,9 @@ const bootstrap = async () => {
 		path: "/voyager",
 		endpoint: "/graphql",
 	});
+	app.get("/health-check", (req, res) => {
+		res.send("ok").status(200);
+	});
 	app.register(cors, { origin: "*", credentials: true });
 	app.listen({ port: 4000 });
 	console.log(`🚀 Server ready at http://localhost:4000${server.graphqlPath}`);
