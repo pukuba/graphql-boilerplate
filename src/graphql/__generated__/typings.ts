@@ -1,5 +1,5 @@
 import { GraphQLResolveInfo } from 'graphql';
-import { ApolloContext } from '../context';
+import { MercuriusContext } from '../context';
 export type Maybe<T> = T | null;
 export type InputMaybe<T> = Maybe<T>;
 export type Exact<T extends { [key: string]: unknown }> = { [K in keyof T]: T[K] };
@@ -109,15 +109,15 @@ export type ResolversParentTypes = {
   String: Scalars['String'];
 };
 
-export type MutationResolvers<ContextType = ApolloContext, ParentType extends ResolversParentTypes['Mutation'] = ResolversParentTypes['Mutation']> = {
+export type MutationResolvers<ContextType = MercuriusContext, ParentType extends ResolversParentTypes['Mutation'] = ResolversParentTypes['Mutation']> = {
   throw?: Resolver<ResolversTypes['Boolean'], ParentType, ContextType>;
 };
 
-export type QueryResolvers<ContextType = ApolloContext, ParentType extends ResolversParentTypes['Query'] = ResolversParentTypes['Query']> = {
+export type QueryResolvers<ContextType = MercuriusContext, ParentType extends ResolversParentTypes['Query'] = ResolversParentTypes['Query']> = {
   ping?: Resolver<ResolversTypes['Boolean'], ParentType, ContextType>;
 };
 
-export type Resolvers<ContextType = ApolloContext> = {
+export type Resolvers<ContextType = MercuriusContext> = {
   Mutation?: MutationResolvers<ContextType>;
   Query?: QueryResolvers<ContextType>;
 };

@@ -1,19 +1,19 @@
-import { ContextFunction } from 'apollo-server-core';
-import { FastifyContext } from 'apollo-server-fastify';
+import { FastifyReply, FastifyRequest } from 'fastify';
 import Winston from 'winston';
 
 import logger from '@lib/logger';
 
-export interface ApolloContext {
+export interface MercuriusContext {
 	logger: Winston.Logger;
-	req: FastifyContext["request"];
+	req: FastifyRequest;
 }
 
-export const createApolloContext = (): ContextFunction<FastifyContext, any> => {
-	return async ({ request }) => {
-		return {
-			logger: logger,
-			req: request,
-		};
+export const createMercuriusContext = (
+	request: FastifyRequest,
+	reply: FastifyReply
+) => {
+	return {
+		logger: logger,
+		req: request,
 	};
 };

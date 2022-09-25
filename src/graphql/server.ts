@@ -1,33 +1,15 @@
-import {
-  ApolloServerPluginDrainHttpServer,
-  ApolloServerPluginLandingPageLocalDefault,
-} from 'apollo-server-core';
-import { ApolloServer } from 'apollo-server-fastify';
 import crypto from 'crypto';
 import fastify from 'fastify';
 import { GraphQLSchema } from 'graphql';
+import mercurius from 'mercurius';
 
-import { exceptionLoggingPlugin, fastifyAppClosePlugin } from '@common/plugin';
-import { getConstant } from '@lib/constant';
-import { executor } from '@lib/jit-executor';
+import { createMercuriusContext } from './context';
 
-import { createApolloContext } from './context';
-
-export const startApolloServer = (schema: GraphQLSchema) => {
+export const mercuriusRegister = (schema: GraphQLSchema) => {
 	const app = fastify({
 		disableRequestLogging: true,
-		logger: {
-			prettyPrint: {
-				messageFormat: "{level} - {msg} - {pid} - {reqId}",
-				colorize: getConstant("DEPLOY_MODE") !== "prod",
-				translateTime: "SYS:h:MM:ss TT Z o",
-				levelFirst: true,
-			},
-			level: getConstant("LOG_LEVEL"),
-		},
-		genReqId() {
-			return crypto.randomUUID();
-		},
+		logger: true,
+		genReqId: () => crypto.randomUUID(),
 	});
 	app.addHook("onRequest", (req, res, done) => {
 		if (req.routerPath === "/graphql") {
@@ -43,22 +25,11 @@ export const startApolloServer = (schema: GraphQLSchema) => {
 		}
 		done();
 	});
-	const server = new ApolloServer({
+	app.register(mercurius, {
 		schema,
-		csrfPrevention: true,
-		cache: "bounded",
-		introspection: getConstant("GRAPHQL_PLAYGROUND"),
-		context: createApolloContext(),
-		plugins: [
-			exceptionLoggingPlugin,
-			fastifyAppClosePlugin(app),
-			ApolloServerPluginDrainHttpServer({ httpServer: app.server }),
-			ApolloServerPluginLandingPageLocalDefault({ embed: true }),
-		],
-		executor,
+		graphiql: true,
+		jit: 0,
+		context: createMercuriusContext,
 	});
-	return {
-		app,
-		server,
-	};
+	return app;
 };
