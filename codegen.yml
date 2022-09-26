@@ -1,24 +1,28 @@
-overwrite: true
 generates:
   src/graphql/__generated__/schema.graphql:
+    overwrite: true
     schema:
-      - ./src/graphql/**/*.graphql
+      - ./src/graphql/resolvers/**/*.graphql
     plugins:
       - schema-ast
     config:
       includeDirectives: true
   src/graphql/__generated__/typings.ts:
+    overwrite: true
     schema:
-      - ./src/graphql/**/*.graphql
+      - ./src/graphql/resolvers/**/*.graphql
     plugins:
       - "typescript"
       - "typescript-resolvers"
     config:
       noNamespaces: true
       contextType: ../context#MercuriusContext
+      scalars:
+        URL: string
   src/graphql/__generated__/typeDefs.ts:
+    overwrite: true
     schema:
-      - ./src/graphql/**/*.graphql
+      - ./src/graphql/resolvers/**/*.graphql
     plugins:
       - add:
           content: |
