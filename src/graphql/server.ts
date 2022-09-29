@@ -3,14 +3,15 @@ import fastify from 'fastify';
 import { GraphQLSchema } from 'graphql';
 import mercurius from 'mercurius';
 
-import { createMercuriusContext } from './context';
+import { createMercuriusContext, initService } from './context';
 
-export const mercuriusRegister = (schema: GraphQLSchema) => {
+export const mercuriusRegister = async (schema: GraphQLSchema) => {
 	const app = fastify({
 		disableRequestLogging: true,
 		logger: true,
 		genReqId: () => crypto.randomUUID(),
 	});
+	await Promise.all(initService);
 	app.addHook("onRequest", (req, res, done) => {
 		if (req.routerPath === "/graphql") {
 			req.log.info("request");

@@ -11,7 +11,7 @@ import { applyBullBoard } from './common/lib/apply-bull-board';
 import { getSchema } from './graphql/schema';
 
 const bootstrap = async () => {
-	const app = mercuriusRegister(getSchema());
+	const app = await mercuriusRegister(getSchema());
 	app.register(applyBullBoard().registerPlugin(), {
 		basePath: "/queue",
 		prefix: "/queue",
